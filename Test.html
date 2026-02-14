@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  overflow-x:hidden;
+}
+
+.page{
+  display:none;
+  padding:20px;
+  text-align:center;
+}
+
+.active{
+  display:block;
+}
+
+/* Top Text */
+.top-text{
+  font-size:22px;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+/* Carousel */
+.carousel{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  gap:10px;
+}
+
+.carousel img{
+  width:100%;
+  max-width:300px;
+  border-radius:15px;
+  scroll-snap-align:center;
+  flex-shrink:0;
+}
+
+/* Paragraph */
+.message{
+  margin-top:20px;
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* Buttons */
+button{
+  padding:10px 20px;
+  margin:15px;
+  font-size:16px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.yes{
+  background:#ff4d6d;
+  color:white;
+}
+
+.no{
+  background:#333;
+  color:white;
+  position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+
+  <div class="top-text">
+    Hy venamavaneyyyyy ❤️Oru kutii suprise or oru kuti thing unkagaaa!!!🫴🏻
+  </div>
+
+  <div class="carousel">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+
+  <div class="message">
+  Thank you so muchh for being with me in ups and downss..Neraiya vishathuku soliteee polaam for taking me on endless bike rides💗and evlo polambunalumm hesitate panama u will listenn😭🫂indha 3 yrs journey unkuda nenaichi pathaa neriya memories ooda happy moments ooda neraiya sandaigal ooda odidichuyy😂🫶🏻Evlo sanda potalum theripi unta dhn varehnnn🫶🏻aana nayeh thimiru katuraa nee😒romba panra ne frst mari prioritize pana maturaa🤧kadupu ethuvaa aana ena panurathu tehripi Inga dhn vara thonum...Inime matikooo 🤌🏻Uhn kudaa irukum bothu ena maranthu nan naan ah irupehn💃🏼🫶🏻 joly ahhh irukummm✨Epomeee Nenga ehn
+"கேளாமலே கையில் வந்த
+கட்டித் தங்கம் நீயே"💎🧿
+Idhuvum adhn aan frst sonathu this lyns
+"வைரம் ஒன்றை கையில் வைத்து
+எங்கே தேடி அலைந்தாயோ"💗💎
+Unkuda irukura apo tym shouldn't end ...tym pause aana nala irukum nu thonum ..... happie ah vechi irpiinga... ofcourse misunderstanding irukum snda poduvom nerlayum aana adhu elm knjm neram dhnee😁😏 thank you so much for thatt😭🫶🏻🫂 and inum  idhee marii joly ah nraiya memories create pananum..i wish for thatt..😭And yeah epoyum solura mari i wish to be in ur downs , so share panungaa hesitate panathaa solaa😏 i won't be judgingg u, hope u know that laa...ne iapdi irunthalum accept panipehn🤌🏻hope it will continue like this....avlooodhnnn tataww... continue kudungaa next page pogumm ✨
+  </div>
+
+  <button class="yes" onclick="nextPage()">Continue ❤️</button>
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <h2>Will you be my Valentine? 💖</h2>
+
+  <button class="yes" onclick="sayYes()">Yes 😍</button>
+  <button class="no" id="noBtn" onclick="moveNo()">No 😅</button>
+</div>
+
+
+<script>
+let attempts = 0;
+
+function nextPage(){
+  document.getElementById("page1").classList.remove("active");
+  document.getElementById("page2").classList.add("active");
+}
+
+function sayYes(){
+  alert("iapdi sona nala irukum ana sola maturingaleeee anyway take ur time nd think");
+}
+
+function moveNo(){
+  let noBtn = document.getElementById("noBtn");
+  attempts++;
+
+  if(attempts <= 3){
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  } else {
+    alert("Okay okay 😅 you tried enough. Just say Yes ❤️");
+  }
+}
+</script>
+
+</body>
+</html>
